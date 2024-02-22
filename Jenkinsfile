@@ -13,16 +13,16 @@ environment {
                   echo "-----------Build Completed------"
             }
         stage('SonarQube analysis') {
-        environment {
+            environment {
             scannerHome = tool 'valaxy-sonar-scanner'
-        }
+            }
             steps {
-                 withSonarQubeEnv('valaxy-sonarqube-server') { 
+               withSonarQubeEnv('valaxy-sonarqube-server') { 
                sh "${scannerHome}/bin/sonar-scanner" }
-   
-  }
-        }
+                }
+            }
+        } 
     }
 }
-}
+
 
