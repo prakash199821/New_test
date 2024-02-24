@@ -1,3 +1,4 @@
+
 pipeline {
     agent {
         node {
@@ -26,3 +27,7 @@ environment {
     }
     }
   }
+
+           
+}
+}
