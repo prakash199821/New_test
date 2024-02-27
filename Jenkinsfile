@@ -17,18 +17,18 @@ environment {
             }
         }
 
-        stage('SonarQube analysis') {
+//      stage('SonarQube analysis') {
    // environment {
      // scannerHome = tool 'vsonar-scanner'
    // }
-    steps{
-    withSonarQubeEnv('sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
+ //   steps{
+  //  withSonarQubeEnv('sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
      // sh "${scannerHome}"
-        sh 'vsonar-scanner'
-    }
-    }
-        }
-        
+     //   sh 'vsonar-scanner'
+  //  }
+  //  }
+    //    }
+      
 
     
   
