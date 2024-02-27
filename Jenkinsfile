@@ -17,7 +17,7 @@ environment {
             }
         }
 
-        stage('SonarQube analysis') //{
+        stage('SonarQube analysis') {
    // environment {
      // scannerHome = tool 'vsonar-scanner'
    // }
