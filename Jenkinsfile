@@ -1,5 +1,5 @@
 def registry = 'https://prakash012.jfrog.io'
-//def imageName = 'prakash012.jfrog.io/prakash-docker-local/ttrend'
+def imageName = 'prakash012.jfrog.io/prakash-docker-local/ttrend'
 def version   = '2.1.2'
 pipeline {
     agent {
@@ -61,7 +61,7 @@ environment {
     }  
 
            
- /*   stage(" Docker Build ") {
+   stage(" Docker Build ") {
       steps {
         script {
            echo '<--------------- Docker Build Started --------------->'
@@ -75,11 +75,11 @@ environment {
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry, '415bcf63-6650-49d0-bc1d-1d980529e9f4'){
+                docker.withRegistry(registry, 'artifactory-cred'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
             }
         }
-    } */
+    } 
     }}
